@@ -1,4 +1,4 @@
-def problem_one(num: int, multiples: list) -> int:
+def problem_one(num: int = 1000, multiples: list = [3, 5]) -> int:
     """
     Sums numbers below `num` divisible by any of the numbers in `multiples`.
 
@@ -15,7 +15,7 @@ def problem_one(num: int, multiples: list) -> int:
     return sum([i for i in range(1, num) if any(i % m == 0 for m in multiples)])
 
 
-def problem_two(num: int) -> int:
+def problem_two(num: int = 4000000) -> int:
     """
     Sums all even Fibonacci numbers less than `num`.
 
@@ -36,7 +36,7 @@ def problem_two(num: int) -> int:
     return total
 
 
-def problem_three(num: int) -> int:
+def problem_three(num: int = 600851475143) -> int:
     """
     Returns the largest prime factor of `num`.
 
@@ -57,7 +57,7 @@ def problem_three(num: int) -> int:
     return num
 
 
-def problem_four(digits: int) -> int:
+def problem_four(digits: int = 3) -> int:
     """
     Finds the largest palindrome made from the product of two `digits`-digit numbers.
 
@@ -82,7 +82,7 @@ def problem_four(digits: int) -> int:
                 max_palindrome = product
     return max_palindrome
 
-def problem_five(num: int) -> int:
+def problem_five(num: int = 20) -> int:
     """
     Finds the smallest positive number that is evenly divisible by all numbers from 1 to `num`.
 
@@ -101,25 +101,9 @@ def problem_five(num: int) -> int:
             return i
         i += num
 
-import math
+#print(problem_one()) # 233168
+#print(problem_two()) # 4613732
+#print(problem_three()) # 6857
+#print(problem_four()) # 906609
+#print(problem_five()) # 232792560
 
-def lcm(a, b):
-    """Returns the least common multiple (LCM) of two numbers."""
-    return 
-
-def smallest_multiple(x: int) -> int:
-    """
-    Finds the smallest number that is divisible by all numbers from 1 to `x`.
-
-    Args:
-        x (int): The upper limit (inclusive).
-
-    Returns:
-        int: The smallest number divisible by all numbers from 1 to `x`.
-    """
-    result = 1
-    for i in range(1, x + 1):
-        result = abs(result * i) // math.gcd(result, i)
-    return result
-
-print(smallest_multiple(20))
