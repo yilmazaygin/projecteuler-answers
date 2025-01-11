@@ -264,12 +264,28 @@ def problem_fourteen(limit:int = 1000000) -> int:
     
     return number
 
-def problem_fifteen()
-    pass
+def problem_fifteen(grid_len: int = 20) -> int:
+    """
+    Calculate the number of routes in a grid of size `grid_len` x `grid_len`.
+
+    Args:
+        grid_len (int): The size of the grid.
+
+    Returns:
+        int: The number of routes in the grid.
+
+    Explanation:
+        Mathematically, the number of routes in a grid of size `grid_len` x `grid_len`
+        can be calculated using the binomial coefficient formula. The number of routes
+        is equivalent to the number of combinations of `grid_len` elements taken from
+        `2 * grid_len` elements. The function uses the math.comb() method to calculate
+    """
+    import math
+    return math.comb(2 * grid_len, grid_len)
 
 #print(problem_eleven()) # 70600674
 #print(problem_twelve()) # 76576500
 #print(problem_thirteen()) # 5537376230
 #print(problem_fourteen()) # 837799
-print(problem_fifteen()) # 137846528820 ?
+#print(problem_fifteen()) # 137846528820 ?
 
