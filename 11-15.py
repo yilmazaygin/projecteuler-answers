@@ -288,4 +288,3 @@ def problem_fifteen(grid_len: int = 20) -> int:
 #print(problem_thirteen()) # 5537376230
 #print(problem_fourteen()) # 837799
 #print(problem_fifteen()) # 137846528820 ?
-
